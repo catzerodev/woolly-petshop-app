@@ -1,63 +1,90 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Shirt, Bone, BedDouble, Briefcase } from "lucide-react";
+
+const categories = [
+  {
+    title: "Ropa y accesorios",
+    products: "84 productos",
+    bg: "bg-[#EFE4FF]",
+    image: "/categories/clothing.jpg",
+    icon: <Shirt size={22} />,
+  },
+  {
+    title: "Alimento",
+    products: "64 productos",
+    bg: "bg-[#FFE8D6]",
+    image: "/categories/food.jpg",
+    icon: <Bone size={22} />,
+  },
+  {
+    title: "Camas",
+    products: "22 productos",
+    bg: "bg-[#DDF8EC]",
+    image: "/categories/beds.jpg",
+    icon: <BedDouble size={22} />,
+  },
+  {
+    title: "Bolsos y kennels",
+    products: "16 productos",
+    bg: "bg-[#F3E2FF]",
+    image: "/categories/carriers.jpg",
+    icon: <Briefcase size={22} />,
+  },
+];
 
 export default function Categories() {
-  const categories = [
-    {
-      name: "Ropa y accesorios",
-      products: 84,
-      image: "/categories/clothing.jpg",
-    },
-    {
-      name: "Alimento",
-      products: 64,
-      image: "/categories/food.jpg",
-    },
-    {
-      name: "Camas",
-      products: 22,
-      image: "/categories/beds.jpg",
-    },
-    {
-      name: "Bolsos y kennels",
-      products: 16,
-      image: "/categories/carriers.jpg",
-    },
-  ];
-
   return (
-    <section className="max-w-6xl mx-auto px-6 py-24">
-      <h2 className="text-[34px] font-bold mb-8 font-[Pacifico]">
-        Categorías favoritas
-      </h2>
+    <section className="py-24 bg-white">
+      <div className="max-w-6xl mx-auto px-6">
+        
+        {/* TITLE */}
+        <h2 className="text-4xl font-['Pacifico'] mb-14">
+          Categorías favoritas
+        </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-        {categories.map((cat, i) => (
-          <div
-            key={i}
-            className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-4 cursor-pointer"
-          >
-            <div className="h-40 rounded-xl overflow-hidden mb-4 relative">
-              <img
-                src={cat.image}
-                alt={cat.name}
-                className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
-              />
-
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition"></div>
-            </div>
-
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="font-semibold">{cat.name}</p>
-                <p className="text-sm text-gray-500">
-                  {cat.products} productos
-                </p>
+        {/* GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
+          {categories.map((item, index) => (
+            <div
+              key={index}
+              className={`${item.bg} relative rounded-[32px] p-7 h-[320px] overflow-hidden shadow-sm hover:shadow-xl transition duration-300`}
+            >
+              
+              {/* TOP ICON */}
+              <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md text-black z-20 relative">
+                {item.icon}
               </div>
 
-              <ArrowRight className="text-orange-500 w-5 h-5 transition transform group-hover:translate-x-1" />
+              {/* IMAGE */}
+              <div className="absolute top-[30px] right-0 left-0 flex justify-center z-10">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-[190px] h-[150px] object-cover rounded-[28px] transition duration-300 hover:scale-105"
+                />
+              </div>
+
+              {/* CONTENT */}
+              <div className="absolute bottom-7 left-7 right-7 flex items-end justify-between">
+                <div>
+                  <h3 className="text-2xl font-bold leading-tight max-w-[140px]">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-gray-600 mt-2 text-lg">
+                    {item.products}
+                  </p>
+                </div>
+
+                {/* BUTTON */}
+                <button className="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center hover:scale-110 transition">
+                  <ArrowRight size={24} />
+                </button>
+              </div>
+
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
       </div>
     </section>
   );
