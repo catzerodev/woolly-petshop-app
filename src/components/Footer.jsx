@@ -6,11 +6,11 @@ export default function Footer() {
       <img
   src="/footer/pug.png"
   alt="Pug"
-  className="absolute left-1/2 -translate-x-1/2 top-0 z-20 w-[1800px]"
+  className="absolute left-1/2 -translate-x-1/2 top-[-110px] z-20 w-[1800px]"
 />
 
       {/* WAVE BACKGROUND */}
-      <div className="pt-40">
+      <div className="pt-6">
 
         <div
           className="
@@ -22,6 +22,7 @@ export default function Footer() {
             
             overflow-hidden
             w-full
+            
           "
         >
 
@@ -39,7 +40,7 @@ export default function Footer() {
           />
 
           {/* CONTENT */}
-          <div className="max-w-7xl mx-auto px-6 pt-32 pb-12 grid grid-cols-1 md:grid-cols-5 gap-10 relative z-10">
+          <div className="max-w-7xl mx-auto px-6 pt-44 pb-10 grid grid-cols-1 md:grid-cols-5 gap-6 items-start relative z-20">
 
             {/* BRAND */}
                 <div className="relative z-20">
@@ -47,7 +48,7 @@ export default function Footer() {
                 Woolly PetShop
               </h3>
 
-              <p className="text-gray-700 leading-relaxed mb-5">
+              <p className="text-[15px] text-gray-700 leading-8 mb-5">
                 Lo mejor para consentir a tu mascota con productos premium y grooming profesional.
               </p>
 
@@ -75,7 +76,7 @@ export default function Footer() {
                 Tienda
               </h4>
 
-              <ul className="space-y-3 text-gray-700">
+              <ul className="space-y-2 text-[15px] text-gray-700">
                 <li>Nosotros</li>
                 <li>Blog</li>
                 <li>Gift cards</li>
@@ -113,7 +114,7 @@ export default function Footer() {
 
             {/* CONTACTO */}
             <div>
-              <h4 className="font-black mb-5 uppercase">
+              <h4 className="text-sm font-black mb-4 uppercase tracking-wide">
                 Contacto
               </h4>
 

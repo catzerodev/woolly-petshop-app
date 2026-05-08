@@ -1,39 +1,30 @@
 import {
-  Phone,
-  Mail,
-  MapPin,
   Search,
   Heart,
   ShoppingCart,
   PawPrint,
+  User,
 } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <header className="w-full">
-      {/* TOP BAR */}
-      <div className="bg-[#f8f8f8] text-sm py-6">
-        <div className="max-w-6xl mx-auto px-6 flex justify-between items-center text-gray-600">
-          <div className="flex gap-6 items-center">
-            <span className="flex items-center gap-2">
-              <Phone size={14} /> +593 96 800 2100
-            </span>
-            <span className="flex items-center gap-2">
-              <Mail size={14} /> ventas@woollypetshop.com
-            </span>
-          </div>
+    <header
+  className="
+    w-full
+    bg-gradient-to-r
+    from-[#E8DFFF]
+    via-[#FBE3DA]
+    to-[#FFD29D]
+  "
+>
+      
 
-          <div className="flex items-center gap-2">
-            <MapPin size={14} />
-            Av. Real Audiencia 59-200, Quito
-          </div>
-        </div>
-      </div>
+     
 
       {/* NAVBAR */}
-      <div className="relative z-50 -mb-16">
+      <div className="relative z-50 pt-8 -mb-16">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="mt-0 bg-white rounded-full px-6 py-3 flex items-center justify-between shadow-[0_15px_40px_rgba(0,0,0,0.12)]">
+          <div className="mt-0 bg-white/70 backdrop-blur-xl border border-white/40 rounded-full px-6 py-3 flex items-center justify-between shadow-[0_15px_40px_rgba(0,0,0,0.12)]">
             
             {/* LOGO */}
             <div className="flex items-center gap-2 font-semibold text-lg">
@@ -75,6 +66,7 @@ export default function Navbar() {
               <div className="flex items-center gap-3 ml-2">
                 <Heart size={18} />
                 <ShoppingCart size={18} />
+                <User size={18} />
               </div>
             </div>
           </div>

@@ -1,39 +1,168 @@
 export default function Hero() {
   return (
-    <section className="relative bg-[#f8f8f8] overflow-visible pt-[110px] pb-40">
+    <section
+      className="
+        relative
+        overflow-visible
+        pt-[20px]
+        pb-20
+        bg-gradient-to-r
+        from-[#E8DFFF]
+        via-[#FBE3DA]
+        to-[#FFD29D]
+      "
+    >
+      {/* BACKGROUND SHAPE */}
       <img
         src="/pattern.png"
-        className="absolute right-0 bottom-0 h-[100%] object-contain z-0"
+        alt=""
+        className="
+        absolute
+        right-0
+        bottom-[40px]
+        h-[92%]
+        object-contain
+        z-2
+        opacity-90
+    "
       />
 
-      <img
-        src="/dog.png"
-        className="absolute right-[210px] bottom-[-261px] h-[700px] object-contain drop-shadow-2xl z-20"
-      />
-
+      {/* PAWS */}
       <img
         src="/paws.svg"
-        className="absolute right-0 bottom-0 h-[105%] object-contain"
+        alt=""
+        className="
+          absolute
+          right-0
+          top-0
+          h-[100%]
+          object-contain
+          opacity-20
+        "
       />
 
-      <div className="absolute right-[170px] bottom-[-10px] w-44 h-12 bg-black/20 blur-2xl rounded-full" />
+      {/* ORANGE GLOW */}
+      <div
+        className="
+  absolute
+  right-0
+  bottom-[-40px]
+  h-[108%]
+  object-contain
+  z-0
+  opacity-90
+"
+      />
 
-      <div className="relative max-w-7xl mx-auto px-6 flex items-center pt-20">
-        <div>
-          <p className="text-orange-500 font-semibold mb-2">Woolly Pet Shop</p>
+      {/* DOG */}
+      <img
+        src="/dog.png"
+        alt="Dog"
+        className="
+          absolute
+          right-[100px]
+          bottom-[-70px]
+          h-[760px]
+          object-contain
+          drop-shadow-[0_30px_40px_rgba(0,0,0,0.35)]
+          z-20
+        "
+      />
 
-          <h1 className="text-6xl leading-[1.2] font-[Pacifico] tracking-wide">
-            Cuidado, amor y estilo <br /> para tu mascota
-          </h1>
+      {/* SHADOW */}
+      <div
+        className="
+          absolute
+          right-[170px]
+          bottom-[20px]
+          w-56
+          h-16
+          bg-black/20
+          blur-3xl
+          rounded-full
+          z-10
+        "
+      />
 
-          <p className="text-[18px] text-gray-600 mt-6 mb-6 max-w-md leading-relaxed">
-            Productos de calidad y servicio de grooming <br />
-            para que siempre luzca feliz y saludable.
+      {/* CONTENT */}
+      <div className="relative max-w-7xl mx-auto px-6 pt-28 z-10">
+        <div className="max-w-[720px]">
+          {/* MINI LABEL */}
+          <p className="text-[#ff8a00] font-semibold mb-5 text-lg">
+            Woolly Pet Shop
           </p>
 
-          <button className="bg-black text-white px-6 py-3 rounded-xl shadow hover:bg-gray-800 transition">
-            Comprar ahora
+          {/* TITLE */}
+          <h1
+            className="
+              text-7xl
+              font-black
+              leading-[0.92]
+              tracking-[-4px]
+              text-[#2B1E1E]
+            "
+          >
+            Cuidado Premium
+            <br />
+            para tu Mejor Amigo
+          </h1>
+
+          {/* SUBTITLE */}
+          <p
+            className="
+              text-[#5f5f5f]
+              text-2xl
+              mt-8
+              mb-10
+              leading-relaxed
+              font-medium
+            "
+          >
+            Lo mejor para ellos, coordinado por WhatsApp.
+          </p>
+
+          {/* BUTTON */}
+          <button
+            className="
+              bg-[#FF8A00]
+              hover:bg-[#ff9500]
+              text-white
+              px-12
+              py-5
+              rounded-full
+              text-xl
+              font-semibold
+              shadow-[0_10px_30px_rgba(255,138,0,0.35)]
+              transition-all
+              duration-300
+              hover:scale-105
+            "
+          >
+            VER PRODUCTOS
           </button>
+
+          {/* MENU */}
+          <div className="flex gap-14 mt-14 text-3xl font-medium text-[#3b2a2a]">
+            <a href="#" className="hover:text-[#ff8a00] transition">
+              Tienda
+            </a>
+
+            <a href="#" className="hover:text-[#ff8a00] transition">
+              Peluquería
+            </a>
+
+            <a href="#" className="hover:text-[#ff8a00] transition">
+              Blog
+            </a>
+
+            <a href="#" className="hover:text-[#ff8a00] transition">
+              Nosotros
+            </a>
+
+            <a href="#" className="hover:text-[#ff8a00] transition">
+              Contacto
+            </a>
+          </div>
         </div>
       </div>
     </section>
