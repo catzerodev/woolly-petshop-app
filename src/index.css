@@ -5,3 +5,10 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+@font-face {
+  font-family: "SatisfyCustom";
+  src: url("./assets/fonts/Satisfy.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
