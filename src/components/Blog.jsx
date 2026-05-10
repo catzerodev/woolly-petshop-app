@@ -15,83 +15,289 @@ const articles = [
 
 export default function Blog() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+    <section
+      className="
+        py-16
+        md:py-20
 
-        {/* TITLE */}
-        <h2 className="text-5xl font-black uppercase mb-12">
+        bg-white
+      "
+    >
+
+      <div className="max-w-[1400px] mx-auto px-6 xl:px-10">
+
+        <h2
+          className="
+            text-[32px]
+            md:text-[42px]
+            lg:text-[52px]
+
+            font-['Fredoka']
+            font-semibold
+
+            leading-[1]
+
+            tracking-[-1px]
+
+            mb-10
+            md:mb-12
+
+            text-[#171717]
+          "
+        >
           Consejos para tu mascota
         </h2>
 
-        {/* GRID */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8">
+        <div
+          className="
+            grid
 
-          {/* MAIN ARTICLE */}
-          <div className="relative rounded-[36px] overflow-hidden h-[420px] group cursor-pointer shadow-lg">
+            grid-cols-1
+            lg:grid-cols-[1.2fr_0.8fr]
+
+            gap-6
+            md:gap-8
+          "
+        >
+
+          <a
+            href="/blog"
+            className="
+              relative
+
+              rounded-[28px]
+              md:rounded-[36px]
+
+              overflow-hidden
+
+              h-[320px]
+              md:h-[420px]
+
+              group
+
+              shadow-lg
+            "
+          >
 
             <img
               src="/blog/dental.jpg"
               alt="Higiene dental"
-              className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              className="
+                w-full
+                h-full
+
+                object-cover
+
+                group-hover:scale-105
+
+                transition
+                duration-500
+              "
             />
 
-            {/* OVERLAY */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+            <div
+              className="
+                absolute
+                inset-0
 
-            {/* CONTENT */}
-            <div className="absolute bottom-8 left-8 right-8 text-white">
+                bg-gradient-to-t
+                from-black/80
+                via-black/10
+                to-transparent
+              "
+            />
 
-              <h3 className="text-5xl font-black uppercase leading-tight mb-3">
+            <div
+              className="
+                absolute
+
+                bottom-5
+                md:bottom-8
+
+                left-5
+                right-5
+                md:left-8
+                md:right-8
+
+                text-white
+              "
+            >
+
+              <h3
+                className="
+                  text-[32px]
+                  md:text-[52px]
+
+                  font-black
+                  uppercase
+
+                  leading-[0.95]
+
+                  mb-3
+                "
+              >
                 Higiene dental
               </h3>
 
-              <p className="text-xl text-white/90 max-w-lg leading-relaxed">
+              <p
+                className="
+                  text-[15px]
+                  md:text-[20px]
+
+                  text-white/90
+
+                  max-w-lg
+
+                  leading-relaxed
+                "
+              >
                 Aprende cómo mantener la salud dental de tu mascota y prevenir enfermedades.
               </p>
 
             </div>
-          </div>
 
-          {/* SIDE ARTICLES */}
-          <div className="flex flex-col gap-6">
+          </a>
+
+          <div
+            className="
+              flex
+              flex-col
+
+              gap-5
+              md:gap-6
+            "
+          >
 
             {articles.map((article, index) => (
-              <div
+              <a
                 key={index}
-                className="flex gap-5 items-center border-b border-gray-200 pb-6 group cursor-pointer"
+                href="/blog"
+                className="
+                  flex
+
+                  flex-col
+                  sm:flex-row
+
+                  gap-4
+                  md:gap-5
+
+                  sm:items-center
+
+                  border-b
+                  border-gray-200
+
+                  pb-5
+                  md:pb-6
+
+                  group
+                "
               >
 
-                {/* IMAGE */}
-                <div className="w-[170px] h-[130px] rounded-[26px] overflow-hidden flex-shrink-0">
+                <div
+                  className="
+                    w-full
+                    sm:w-[170px]
+
+                    h-[220px]
+                    sm:h-[130px]
+
+                    rounded-[24px]
+                    md:rounded-[26px]
+
+                    overflow-hidden
+
+                    flex-shrink-0
+                  "
+                >
 
                   <img
                     src={article.image}
                     alt={article.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                    className="
+                      w-full
+                      h-full
+
+                      object-cover
+
+                      group-hover:scale-105
+
+                      transition
+                      duration-500
+                    "
                   />
+
                 </div>
 
-                {/* TEXT */}
                 <div className="flex-1 relative">
 
-                  {/* BADGE */}
-                  <span className="absolute -top-10 right-0 bg-gray-100 text-black text-xs font-bold px-3 py-1 rounded-full uppercase">
+                  <span
+                    className="
+                      absolute
+
+                      top-0
+                      right-0
+                      sm:-top-8
+
+                      bg-gray-100
+
+                      text-black
+
+                      text-[10px]
+                      md:text-xs
+
+                      font-bold
+
+                      px-3
+                      py-1
+
+                      rounded-full
+
+                      uppercase
+                    "
+                  >
                     News
                   </span>
 
-                  <h4 className="text-3xl font-black uppercase mb-3 leading-tight">
+                  <h4
+                    className="
+                      text-[26px]
+                      md:text-[30px]
+
+                      font-['Fredoka']
+                      font-semibold
+
+                      leading-[1.05]
+
+                      mb-2
+
+                      text-[#171717]
+                    "
+                  >
                     {article.title}
                   </h4>
 
-                  <p className="text-gray-600 text-lg leading-relaxed">
+                  <p
+                    className="
+                      text-[#5F5F5F]
+
+                      text-[15px]
+                      md:text-lg
+
+                      leading-relaxed
+
+                      max-w-[95%]
+                    "
+                  >
                     {article.description}
                   </p>
 
                 </div>
-              </div>
+
+              </a>
             ))}
 
           </div>
+
         </div>
       </div>
     </section>

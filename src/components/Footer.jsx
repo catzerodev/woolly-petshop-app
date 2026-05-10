@@ -12,38 +12,57 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="relative mt-24">
+    <footer
+      className="
+        relative
 
-      {/* PUG */}
+        mt-16
+        md:mt-20
+        lg:mt-24
+      "
+    >
+
       <img
         src="/footer/pug.png"
         alt="Pug"
         className="
           absolute
           right-0
-          top-[-100px]
+
+          top-[-30px]
+          md:top-[-70px]
+          lg:top-[-100px]
+
           z-20
+
           w-full
+
           pointer-events-none
           select-none
         "
       />
 
-      {/* BACKGROUND */}
-      <div className="pt-6">
+      <div
+        className="
+          pt-3
+          md:pt-5
+          lg:pt-6
+        "
+      >
 
         <div
           className="
             relative
+
             bg-gradient-to-r
             from-[#F7D8FF]
             via-[#FFE6D6]
             to-[#FFB347]
+
             w-full
           "
         >
 
-          {/* PAWS */}
           <img
             src="/paws.svg"
             alt=""
@@ -51,8 +70,12 @@ export default function Footer() {
               absolute
               left-0
               top-0
+
               opacity-10
-              w-[300px]
+
+              w-[140px]
+              md:w-[220px]
+              lg:w-[300px]
             "
           />
 
@@ -63,28 +86,42 @@ export default function Footer() {
               absolute
               right-0
               bottom-0
+
               opacity-10
-              w-[300px]
+
+              w-[140px]
+              md:w-[220px]
+              lg:w-[300px]
+
               rotate-180
             "
           />
 
-          {/* CONTENT */}
           <div
             className="
-              max-w-7xl
+              max-w-[1400px]
               mx-auto
 
-              px-8
+              px-5
+              md:px-8
+              xl:px-10
 
-              pt-56
-              pb-16
+              pt-28
+              md:pt-44
+              lg:pt-56
+
+              pb-12
+              md:pb-14
+              lg:pb-16
 
               grid
-              grid-cols-1
-              md:grid-cols-5
 
-              gap-12
+              grid-cols-1
+              sm:grid-cols-2
+              lg:grid-cols-5
+
+              gap-10
+              md:gap-12
 
               items-start
 
@@ -93,14 +130,18 @@ export default function Footer() {
             "
           >
 
-            {/* BRAND */}
             <div>
 
               <h3
                 className="
-                  text-[52px]
+                  text-[38px]
+                  md:text-[46px]
+                  lg:text-[52px]
+
                   leading-[0.92]
+
                   font-black
+
                   tracking-tight
                 "
               >
@@ -111,27 +152,45 @@ export default function Footer() {
 
               <p
                 className="
-                  mt-6
+                  mt-5
+                  md:mt-6
+
                   text-[14px]
+                  md:text-[15px]
+
                   leading-[1.9]
+
                   text-[#625B5B]
-                  max-w-[200px]
+
+                  max-w-[220px]
                 "
               >
                 Lo mejor para consentir a tu mascota con productos premium y grooming profesional.
               </p>
 
-              {/* SOCIALS */}
-              <div className="flex gap-4 mt-10">
+              <div
+                className="
+                  flex
 
-                <button
+                  gap-3
+                  md:gap-4
+
+                  mt-8
+                  md:mt-10
+                "
+              >
+
+                <a
+                  href="#"
                   className="
-                    w-12
-                    h-12
+                    w-10
+                    h-10
+                    md:w-12
+                    md:h-12
+
                     rounded-full
 
                     bg-white/90
-                    backdrop-blur-md
 
                     shadow-md
 
@@ -146,17 +205,20 @@ export default function Footer() {
                     duration-300
                   "
                 >
-                  <FaFacebookF size={16} />
-                </button>
+                  <FaFacebookF size={15} />
+                </a>
 
-                <button
+                <a
+                  href="#"
                   className="
-                    w-12
-                    h-12
+                    w-10
+                    h-10
+                    md:w-12
+                    md:h-12
+
                     rounded-full
 
                     bg-white/90
-                    backdrop-blur-md
 
                     shadow-md
 
@@ -171,17 +233,20 @@ export default function Footer() {
                     duration-300
                   "
                 >
-                  <FaInstagram size={17} />
-                </button>
+                  <FaInstagram size={16} />
+                </a>
 
-                <button
+                <a
+                  href="#"
                   className="
-                    w-12
-                    h-12
+                    w-10
+                    h-10
+                    md:w-12
+                    md:h-12
+
                     rounded-full
 
                     bg-white/90
-                    backdrop-blur-md
 
                     shadow-md
 
@@ -196,120 +261,176 @@ export default function Footer() {
                     duration-300
                   "
                 >
-                  <FaWhatsapp size={17} />
-                </button>
+                  <FaWhatsapp size={16} />
+                </a>
 
               </div>
+
             </div>
 
-            {/* TIENDA */}
             <div>
 
               <h4
                 className="
-                  text-[14px]
+                  text-[13px]
+                  md:text-[14px]
+
                   font-black
+
                   uppercase
+
                   tracking-[1px]
-                  mb-8
-                  ml-6
+
+                  mb-6
+                  md:mb-8
+
+                  lg:ml-6
                 "
               >
                 Tienda
               </h4>
 
-              <ul className="space-y-4 text-[17px] text-[#5F5F5F] ml-6">
+              <ul
+                className="
+                  space-y-3
+                  md:space-y-4
 
-                <li className="hover:text-black transition cursor-pointer">
-                  Nosotros
-                </li>
+                  text-[15px]
+                  md:text-[17px]
 
-                <li className="hover:text-black transition cursor-pointer">
-                  Blog
-                </li>
+                  text-[#5F5F5F]
 
-                <li className="hover:text-black transition cursor-pointer">
-                  Gift cards
-                </li>
+                  lg:ml-6
+                "
+              >
 
-                <li className="hover:text-black transition cursor-pointer">
-                  Adopta
-                </li>
+                <li><a href="/" className="hover:text-black transition">Nosotros</a></li>
+                <li><a href="/blog" className="hover:text-black transition">Blog</a></li>
+                <li><a href="/" className="hover:text-black transition">Gift cards</a></li>
+                <li><a href="/" className="hover:text-black transition">Adopta</a></li>
 
               </ul>
+
             </div>
 
-            {/* CATEGORIAS */}
             <div>
 
               <h4
                 className="
-                  text-[14px]
+                  text-[13px]
+                  md:text-[14px]
+
                   font-black
+
                   uppercase
+
                   tracking-[1px]
-                  mb-7
+
+                  mb-6
+                  md:mb-7
                 "
               >
                 Categorías
               </h4>
 
-              <ul className="space-y-4 text-[17px] text-[#5F5F5F]">
+              <ul
+                className="
+                  space-y-3
+                  md:space-y-4
 
-                <li>Ropa y accesorios</li>
-                <li>Alimento</li>
-                <li>Camas</li>
-                <li>Kennels</li>
+                  text-[15px]
+                  md:text-[17px]
+
+                  text-[#5F5F5F]
+                "
+              >
+
+                <li><a href="/shop" className="hover:text-black transition">Ropa y accesorios</a></li>
+                <li><a href="/shop" className="hover:text-black transition">Alimento</a></li>
+                <li><a href="/shop" className="hover:text-black transition">Camas</a></li>
+                <li><a href="/shop" className="hover:text-black transition">Kennels</a></li>
 
               </ul>
+
             </div>
 
-            {/* LINKS */}
             <div>
 
               <h4
                 className="
-                  text-[14px]
+                  text-[13px]
+                  md:text-[14px]
+
                   font-black
+
                   uppercase
+
                   tracking-[1px]
-                  mb-7
+
+                  mb-6
+                  md:mb-7
                 "
               >
                 Enlaces útiles
               </h4>
 
-              <ul className="space-y-4 text-[17px] text-[#5F5F5F]">
+              <ul
+                className="
+                  space-y-3
+                  md:space-y-4
 
-                <li>Contacto</li>
-                <li>Envíos</li>
-                <li>Reembolsos</li>
-                <li>Preguntas frecuentes</li>
+                  text-[15px]
+                  md:text-[17px]
+
+                  text-[#5F5F5F]
+                "
+              >
+
+                <li><a href="/" className="hover:text-black transition">Contacto</a></li>
+                <li><a href="/" className="hover:text-black transition">Envíos</a></li>
+                <li><a href="/" className="hover:text-black transition">Reembolsos</a></li>
+                <li><a href="/" className="hover:text-black transition">Preguntas frecuentes</a></li>
 
               </ul>
+
             </div>
 
-            {/* CONTACTO */}
             <div>
 
               <h4
                 className="
-                  text-[14px]
+                  text-[13px]
+                  md:text-[14px]
+
                   font-black
+
                   uppercase
+
                   tracking-[1px]
-                  mb-7
+
+                  mb-6
+                  md:mb-7
                 "
               >
                 Contacto
               </h4>
 
-              <div className="space-y-6 text-[#5F5F5F] text-[17px]">
+              <div
+                className="
+                  space-y-5
+                  md:space-y-6
 
-                <div className="flex gap-4 items-start">
+                  text-[#5F5F5F]
+
+                  text-[15px]
+                  md:text-[17px]
+                "
+              >
+
+                <div className="flex gap-3 md:gap-4 items-start">
 
                   <HiOutlineLocationMarker
-                    size={20}
+                    size={18}
                     className="mt-1 text-black"
                   />
 
@@ -319,10 +440,10 @@ export default function Footer() {
 
                 </div>
 
-                <div className="flex gap-4 items-center">
+                <div className="flex gap-3 md:gap-4 items-center">
 
                   <HiOutlinePhone
-                    size={20}
+                    size={18}
                     className="text-black"
                   />
 
@@ -330,10 +451,10 @@ export default function Footer() {
 
                 </div>
 
-                <div className="flex gap-4 items-center">
+                <div className="flex gap-3 md:gap-4 items-center">
 
                   <HiOutlineMail
-                    size={20}
+                    size={18}
                     className="text-black"
                   />
 
@@ -342,21 +463,24 @@ export default function Footer() {
                 </div>
 
               </div>
+
             </div>
 
           </div>
 
-          {/* BOTTOM */}
           <div
             className="
               border-t
               border-black/10
 
-              py-6
+              py-5
+              md:py-6
 
               text-center
 
-              text-[15px]
+              text-[13px]
+              md:text-[15px]
+
               text-[#6B6B6B]
 
               relative

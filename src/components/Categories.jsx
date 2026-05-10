@@ -37,28 +37,65 @@ const categories = [
 
 export default function Categories() {
   return (
-    <section className="py-24 bg-white">"
-      <div className="max-w-6xl mx-auto px-6">
+    <section
+      className="
+        py-16
+        md:py-20
+        lg:py-24
 
-        {/* TITLE */}
-        <h2 className="text-4xl font-['Pacifico'] mb-14">
+        bg-white
+      "
+    >
+
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+
+        <h2
+          className="
+            text-4xl
+            md:text-5xl
+
+            font-['Fredoka']
+            font-semibold
+
+            mb-12
+            md:mb-14
+          "
+        >
           Categorías favoritas
         </h2>
 
-        {/* GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
+        <div
+          className="
+            grid
+
+            grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-4
+
+            gap-5
+            md:gap-6
+            lg:gap-7
+          "
+        >
 
           {categories.map((item, index) => (
-            <div
+            <a
               key={index}
+              href="/shop"
               className={`
                 ${item.bg}
 
                 relative
-                rounded-[34px]
 
-                p-5
-                h-[290px]
+                rounded-[28px]
+                md:rounded-[32px]
+
+                p-4
+                md:p-5
+
+                h-[260px]
+                md:h-[280px]
+                lg:h-[290px]
 
                 overflow-hidden
 
@@ -72,11 +109,19 @@ export default function Categories() {
               `}
             >
 
-              {/* ICON */}
               <div
                 className="
-                  w-12
-                  h-12
+                  absolute
+
+                  top-3
+                  left-3
+                  md:top-4
+                  md:left-4
+
+                  w-11
+                  h-11
+                  md:w-12
+                  md:h-12
 
                   rounded-full
                   bg-white
@@ -89,19 +134,19 @@ export default function Categories() {
 
                   text-black
 
-                  relative
                   z-20
-                  -top-2
                 "
               >
                 {item.icon}
               </div>
 
-              {/* IMAGE */}
               <div
                 className="
                   absolute
-                  top-[25px]
+
+                  top-[30px]
+                  md:top-[25px]
+
                   left-0
                   right-0
 
@@ -111,17 +156,24 @@ export default function Categories() {
                   z-10
                 "
               >
+
                 <img
                   src={item.image}
                   alt={item.title}
                   className={`
-                    w-[210px]
-                    h-[158px]
+                    w-[190px]
+                    md:w-[205px]
+                    lg:w-[210px]
+
+                    h-[145px]
+                    md:h-[154px]
+                    lg:h-[158px]
 
                     object-cover
                     ${item.position}
 
-                    rounded-[26px]
+                    rounded-[24px]
+                    md:rounded-[26px]
 
                     transition
                     duration-300
@@ -129,16 +181,19 @@ export default function Categories() {
                     hover:scale-[1.03]
                   `}
                 />
-                              </div>
+              </div>
 
-              {/* CONTENT */}
               <div
                 className="
                   absolute
 
-                  bottom-5
-                  left-5
-                  right-5
+                  bottom-4
+                  md:bottom-5
+
+                  left-4
+                  right-4
+                  md:left-5
+                  md:right-5
 
                   flex
                   items-end
@@ -147,9 +202,12 @@ export default function Categories() {
               >
 
                 <div>
+
                   <h3
                     className="
-                      text-[17px]
+                      text-[16px]
+                      md:text-[17px]
+
                       font-bold
 
                       leading-[1.08]
@@ -164,7 +222,9 @@ export default function Categories() {
 
                   <p
                     className="
-                      text-[15px]
+                      text-[14px]
+                      md:text-[15px]
+
                       text-[#6F6F6F]
 
                       mt-1
@@ -172,14 +232,15 @@ export default function Categories() {
                   >
                     {item.products}
                   </p>
+
                 </div>
 
-                {/* BUTTON */}
-                <button
+                <div
                   className="
-                    w-12
-                    h-12
-                    
+                    w-11
+                    h-11
+                    md:w-12
+                    md:h-12
 
                     rounded-full
                     bg-white
@@ -189,18 +250,14 @@ export default function Categories() {
                     justify-center
 
                     shadow-[0_6px_18px_rgba(0,0,0,0.08)]
-
-                    hover:scale-105
-
-                    transition
                   "
                 >
-                  <ArrowRight size={18} />
-                </button>
+                  <ArrowRight size={17} />
+                </div>
 
               </div>
 
-            </div>
+            </a>
           ))}
 
         </div>

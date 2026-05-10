@@ -5,8 +5,13 @@ export default function Hero() {
         relative
         overflow-visible
 
-        pt-[44px]
-        pb-12
+        pt-6
+        md:pt-10
+        lg:pt-[44px]
+
+        pb-16
+        md:pb-20
+        lg:pb-12
 
         bg-gradient-to-r
         from-[#E8DFFF]
@@ -15,16 +20,23 @@ export default function Hero() {
       "
     >
 
-      {/* BACKGROUND SHAPE */}
       <img
         src="/pattern.png"
         alt=""
         className="
           absolute
-          right-0
-          bottom-[-18px]
 
-          h-[92%]
+          right-[-120px]
+          md:right-[-40px]
+          lg:right-0
+
+          bottom-[-12px]
+          md:bottom-[-16px]
+          lg:bottom-[-18px]
+
+          h-[55%]
+          md:h-[72%]
+          lg:h-[92%]
 
           object-contain
 
@@ -34,7 +46,6 @@ export default function Hero() {
         "
       />
 
-      {/* PAWS */}
       <img
         src="/paws.svg"
         alt=""
@@ -47,20 +58,29 @@ export default function Hero() {
 
           object-contain
 
-          opacity-[0.18]
+          opacity-[0.10]
+          md:opacity-[0.14]
+          lg:opacity-[0.18]
         "
       />
 
-      {/* DOG */}
       <img
         src="/dog.png"
         alt="Dog"
         className="
           absolute
-          right-[135px]
-          bottom-[-279px]
 
-          h-[760px]
+          right-[-30px]
+          md:right-[20px]
+          lg:right-[135px]
+
+          bottom-[-90px]
+          md:bottom-[-160px]
+          lg:bottom-[-279px]
+
+          h-[320px]
+          md:h-[520px]
+          lg:h-[760px]
 
           object-contain
 
@@ -70,58 +90,94 @@ export default function Hero() {
         "
       />
 
-        {/* PAW SHADOWS */}
-<div
-  className="
-    absolute
-    right-[255px]
-    bottom-[35px]
+      <div
+        className="
+          absolute
 
-    w-24
-    h-10
+          right-[85px]
+          md:right-[160px]
+          lg:right-[255px]
 
-    bg-black/18
-    blur-2xl
-    rounded-full
+          bottom-[10px]
+          md:bottom-[18px]
+          lg:bottom-[35px]
 
-    z-[3]
-  "
-/>
+          w-12
+          md:w-16
+          lg:w-24
 
-<div
-  className="
-    absolute
-    right-[105px]
-    bottom-[35px]
+          h-5
+          md:h-7
+          lg:h-10
 
-    w-24
-    h-10
+          bg-black/18
+          blur-2xl
+          rounded-full
 
-    bg-black/18
-    blur-2xl
-    rounded-full
+          z-[3]
+        "
+      />
 
-    z-[3]
-  "
-/>
+      <div
+        className="
+          absolute
 
+          right-[5px]
+          md:right-[55px]
+          lg:right-[105px]
 
+          bottom-[10px]
+          md:bottom-[18px]
+          lg:bottom-[35px]
 
-      {/* CONTENT */}
-      <div className="relative max-w-7xl mx-auto px-20 pt-52 z-10">
+          w-12
+          md:w-16
+          lg:w-24
 
-        <div className="max-w-[760px]">
+          h-5
+          md:h-7
+          lg:h-10
 
-          {/* TITLE */}
+          bg-black/18
+          blur-2xl
+          rounded-full
+
+          z-[3]
+        "
+      />
+
+      <div className="relative max-w-[1400px] mx-auto px-6 xl:px-10 pt-40 md:pt-44 lg:pt-52 z-10">
+
+        <div
+          className="
+            max-w-full
+            md:max-w-[560px]
+            lg:max-w-[760px]
+
+            relative
+            z-10
+          "
+        >
+
           <h1
             className="
-              text-[72px]
+              text-[42px]
+              md:text-[58px]
+              lg:text-[72px]
+
               leading-[0.92]
-              tracking-[-5px]
+
+              tracking-[-2px]
+              md:tracking-[-3px]
+              lg:tracking-[-5px]
 
               font-black
 
               text-[#2B1E1E]
+
+              max-w-[280px]
+              md:max-w-[520px]
+              lg:max-w-full
             "
           >
             Un lugar pensado
@@ -129,39 +185,59 @@ export default function Hero() {
             para ellos
           </h1>
 
-          {/* SUBTITLE */}
           <p
             className="
               text-[#5F5F5F]
 
-              text-[30px]
+              text-[18px]
+              md:text-[24px]
+              lg:text-[30px]
 
               leading-relaxed
 
               font-medium
 
-              mt-10
+              mt-6
+              md:mt-8
+              lg:mt-10
+
+              max-w-[240px]
+              md:max-w-[420px]
+              lg:max-w-[520px]
             "
           >
             Donde cada detalle cuida su día
           </p>
 
-          {/* BUTTON */}
-          <button
+          <a
+            href="/shop"
             className="
-              mt-12
+              inline-flex
+              items-center
+              justify-center
+
+              mt-8
+              md:mt-10
+              lg:mt-12
 
               bg-[#FF8A00]
               hover:bg-[#ff9500]
 
               text-white
 
-              px-12
-              py-4
+              px-8
+              md:px-10
+              lg:px-12
+
+              py-3
+              md:py-4
 
               rounded-full
 
-              text-lg
+              text-[14px]
+              md:text-base
+              lg:text-lg
+
               font-semibold
 
               shadow-[0_10px_30px_rgba(255,138,0,0.35)]
@@ -173,33 +249,54 @@ export default function Hero() {
             "
           >
             VER PRODUCTOS
-          </button>
+          </a>
+
         </div>
       </div>
 
-     
-      {/* WAVE */}
-      <div className="absolute bottom-[-20px] left-0 w-full overflow-hidden leading-none z-[5]">
-      <svg
-      viewBox="0 0 1440 120"
-      className="w-full h-[70px] block"
-       preserveAspectRatio="none"
+      <div
+        className="
+          absolute
+
+          bottom-[-10px]
+          md:bottom-[-14px]
+          lg:bottom-[-20px]
+
+          left-0
+          w-full
+
+          overflow-hidden
+          leading-none
+
+          z-[5]
+        "
       >
-   
-      <path
-      d="
-          M0,70
-  C260,105 520,35 780,70
-  C1040,105 1240,40 1440,70
-  L1440,120
-  L0,120
-  Z
-"
-      fill="white"
-    />
-  </svg>
-</div>
+        <svg
+          viewBox="0 0 1440 120"
+          className="
+            w-full
+
+            h-[45px]
+            md:h-[58px]
+            lg:h-[70px]
+
+            block
+          "
+          preserveAspectRatio="none"
+        >
+          <path
+            d="
+              M0,70
+              C260,105 520,35 780,70
+              C1040,105 1240,40 1440,70
+              L1440,120
+              L0,120
+              Z
+            "
+            fill="white"
+          />
+        </svg>
+      </div>
     </section>
   );
 }
-
