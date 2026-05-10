@@ -2,13 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: 'Poppins', sans-serif;
+html,
+body,
+#root {
+  overflow-x: hidden;
+  width: 100%;
 }
 
-@font-face {
-  font-family: "SatisfyCustom";
-  src: url("./assets/fonts/Satisfy.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
+body {
+  font-family: 'Poppins', sans-serif;
+  background: white;
+  color: #171717;
 }

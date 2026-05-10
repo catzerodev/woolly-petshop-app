@@ -9,7 +9,7 @@ export default function Hero() {
         md:pt-10
         lg:pt-[44px]
 
-        pb-16
+        pb-14
         md:pb-20
         lg:pb-12
 
@@ -20,23 +20,54 @@ export default function Hero() {
       "
     >
 
+      {/* PAWS */}
       <img
-        src="/pattern.png"
+        src="/paws.svg"
         alt=""
         className="
           absolute
 
-          right-[-120px]
-          md:right-[-40px]
+          right-[-40px]
+          md:right-[-10px]
           lg:right-0
 
-          bottom-[-12px]
-          md:bottom-[-16px]
-          lg:bottom-[-18px]
+          top-[40px]
+          md:top-[20px]
+          lg:top-0
 
-          h-[55%]
+          h-[82%]
           md:h-[72%]
-          lg:h-[92%]
+          lg:h-full
+
+          object-contain
+
+          opacity-[0.05]
+          md:opacity-[0.06]
+          lg:opacity-[0.10]
+
+          scale-[0.82]
+          md:scale-[0.9]
+          lg:scale-110
+
+          z-0
+        "
+      />
+
+      {/* BLOB DESKTOP */}
+      <img
+        src="/pattern.png"
+        alt=""
+        className="
+          hidden
+          lg:block
+
+          absolute
+
+          right-80
+
+          bottom-0
+
+          h-[92%]
 
           object-contain
 
@@ -46,45 +77,44 @@ export default function Hero() {
         "
       />
 
-      <img
-        src="/paws.svg"
-        alt=""
-        className="
-          absolute
-          right-0
-          top-0
-
-          h-full
-
-          object-contain
-
-          opacity-[0.10]
-          md:opacity-[0.14]
-          lg:opacity-[0.18]
-        "
-      />
-
+      {/* DESKTOP DOG */}
       <img
         src="/dog.png"
         alt="Dog"
         className="
+          hidden
+          lg:block
+
           absolute
 
-          right-[-30px]
-          md:right-[20px]
-          lg:right-[135px]
+          right-[450px]
+          bottom-[-294px]
 
-          bottom-[-90px]
-          md:bottom-[-160px]
-          lg:bottom-[-279px]
-
-          h-[320px]
-          md:h-[520px]
-          lg:h-[760px]
+          h-[760px]
 
           object-contain
 
-          drop-shadow-[0_25px_35px_rgba(0,0,0,0.18)]
+          z-[60]
+        "
+      />
+
+      {/* TABLET DOG */}
+      <img
+        src="/dog-new.png"
+        alt="Dog"
+        className="
+          hidden
+          md:block
+          lg:hidden
+
+          absolute
+
+          right-[-140px]
+          bottom-[-8px]
+
+          h-[500px]
+
+          object-contain
 
           z-20
         "
@@ -92,66 +122,27 @@ export default function Hero() {
 
       <div
         className="
-          absolute
+          relative
 
-          right-[85px]
-          md:right-[160px]
-          lg:right-[255px]
+          max-w-[1400px]
+          mx-auto
 
-          bottom-[10px]
-          md:bottom-[18px]
-          lg:bottom-[35px]
+          px-5
+          md:px-8
+          xl:px-10
 
-          w-12
-          md:w-16
-          lg:w-24
+          pt-28
+          md:pt-40
+          lg:pt-52
 
-          h-5
-          md:h-7
-          lg:h-10
-
-          bg-black/18
-          blur-2xl
-          rounded-full
-
-          z-[3]
+          z-10
         "
-      />
-
-      <div
-        className="
-          absolute
-
-          right-[5px]
-          md:right-[55px]
-          lg:right-[105px]
-
-          bottom-[10px]
-          md:bottom-[18px]
-          lg:bottom-[35px]
-
-          w-12
-          md:w-16
-          lg:w-24
-
-          h-5
-          md:h-7
-          lg:h-10
-
-          bg-black/18
-          blur-2xl
-          rounded-full
-
-          z-[3]
-        "
-      />
-
-      <div className="relative max-w-[1400px] mx-auto px-6 xl:px-10 pt-40 md:pt-44 lg:pt-52 z-10">
+      >
 
         <div
           className="
             max-w-full
-            md:max-w-[560px]
+            md:max-w-[430px]
             lg:max-w-[760px]
 
             relative
@@ -165,7 +156,7 @@ export default function Hero() {
               md:text-[58px]
               lg:text-[72px]
 
-              leading-[0.92]
+              leading-[0.95]
 
               tracking-[-2px]
               md:tracking-[-3px]
@@ -176,7 +167,7 @@ export default function Hero() {
               text-[#2B1E1E]
 
               max-w-[280px]
-              md:max-w-[520px]
+              md:max-w-[420px]
               lg:max-w-full
             "
           >
@@ -190,19 +181,19 @@ export default function Hero() {
               text-[#5F5F5F]
 
               text-[18px]
-              md:text-[24px]
+              md:text-[22px]
               lg:text-[30px]
 
               leading-relaxed
 
               font-medium
 
-              mt-6
-              md:mt-8
+              mt-5
+              md:mt-7
               lg:mt-10
 
-              max-w-[240px]
-              md:max-w-[420px]
+              max-w-[220px]
+              md:max-w-[320px]
               lg:max-w-[520px]
             "
           >
@@ -216,8 +207,8 @@ export default function Hero() {
               items-center
               justify-center
 
-              mt-8
-              md:mt-10
+              mt-7
+              md:mt-9
               lg:mt-12
 
               bg-[#FF8A00]
@@ -225,17 +216,17 @@ export default function Hero() {
 
               text-white
 
-              px-8
-              md:px-10
+              px-7
+              md:px-9
               lg:px-12
 
-              py-3
+              py-[11px]
               md:py-4
 
               rounded-full
 
-              text-[14px]
-              md:text-base
+              text-[13px]
+              md:text-[15px]
               lg:text-lg
 
               font-semibold
@@ -252,23 +243,53 @@ export default function Hero() {
           </a>
 
         </div>
+
+        {/* MOBILE DOG */}
+        <div
+          className="
+            md:hidden
+
+            flex
+            justify-center
+
+            mt-6
+
+            relative
+
+            z-20
+          "
+        >
+          <img
+            src="/dog-new.png"
+            alt="Dog"
+            className="
+              h-[260px]
+
+              object-contain
+
+              translate-y-[12px]
+            "
+          />
+        </div>
+
       </div>
 
+
+      {/* WAVE */}
       <div
         className="
           absolute
 
-          bottom-[-10px]
-          md:bottom-[-14px]
-          lg:bottom-[-20px]
+          bottom-[-30px]
 
           left-0
           w-full
+          
 
           overflow-hidden
           leading-none
 
-          z-[5]
+          z-[10]
         "
       >
         <svg
@@ -276,8 +297,8 @@ export default function Hero() {
           className="
             w-full
 
-            h-[45px]
-            md:h-[58px]
+            h-[42px]
+            md:h-[54px]
             lg:h-[70px]
 
             block
@@ -297,6 +318,7 @@ export default function Hero() {
           />
         </svg>
       </div>
+
     </section>
   );
 }
