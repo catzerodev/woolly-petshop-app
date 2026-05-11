@@ -83,11 +83,11 @@ export default function Navbar() {
               />
             </div>
 
-            <div className="leading-none">
+            <div className="leading-[1.1] tracking-[-1px]">
 
               <h2
                 className="
-                  text-[18px]
+                  text-[18px] 
                   md:text-[22px]
 
                   font-semibold

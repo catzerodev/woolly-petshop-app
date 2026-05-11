@@ -15,23 +15,48 @@ export default function Footer() {
     <footer className="relative mt-16 md:mt-20 lg:mt-24">
 
       <img
+          src="/paws.svg"
+          alt=""
+          className="
+            absolute
+
+            left-[-110px]
+            bottom-[40px]
+
+            w-[420px]
+            md:w-[420px]
+
+            opacity-[0.035]
+
+            rotate-[8deg]
+
+            pointer-events-none
+            select-none
+
+            z-[1]
+          "
+        />
+
+      <img
         src="/footer/pug.png"
         alt="Pug"
         className="
-          absolute
-          right-0
+  hidden
+  lg:block
 
-          top-[-15px]
-          md:top-[-70px]
-          lg:top-[-100px]
+  absolute
 
-        z-30
+  right-0
 
-          w-full
+  top-[-100px]
 
-          pointer-events-none
-          select-none
-        "
+  z-30
+
+  w-full
+
+  pointer-events-none
+  select-none
+"
       />
 
       <div className="pt-3 md:pt-5 lg:pt-6">
@@ -40,7 +65,7 @@ export default function Footer() {
           className="
             relative
 
-            bg-gradient-to-r
+            bg-gradient-to-r scale-[1.03]
             from-[#F7D8FF]
             via-[#FFE6D6]
             to-[#FFB347]

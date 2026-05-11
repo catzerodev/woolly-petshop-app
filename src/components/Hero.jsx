@@ -63,11 +63,11 @@ export default function Hero() {
 
           absolute
 
-          right-80
+          right-[100px]
 
           bottom-0
 
-          h-[92%]
+          h-[96%]
 
           object-contain
 
@@ -87,7 +87,7 @@ export default function Hero() {
 
           absolute
 
-          right-[450px]
+          right-[280px]
           bottom-[-294px]
 
           h-[760px]
