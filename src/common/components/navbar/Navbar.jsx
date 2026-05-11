@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 import {
@@ -15,17 +16,15 @@ export default function Navbar() {
 
   const navLinks = [
     { label: "Tienda", href: "/shop" },
-    { label: "Peluquería", href: "/" },
-    { label: "Blog", href: "/" },
-    { label: "Nosotros", href: "/" },
-    { label: "Contacto", href: "/" },
+    { label: "Peluquería", href: "/services" },
+    { label: "Blog", href: "/blog" },
+    { label: "Nosotros", href: "/about" },
+    { label: "Contacto", href: "/contact" },
   ];
 
   return (
     <header className="w-full absolute top-0 left-0 z-50">
-
       <div className="max-w-[1400px] mx-auto px-4 md:px-6 xl:px-10 pt-4 md:pt-5">
-
         {/* TOP BAR */}
         <div
           className="
@@ -52,13 +51,8 @@ export default function Navbar() {
             shadow-[0_8px_25px_rgba(0,0,0,0.06)]
           "
         >
-
           {/* LOGO */}
-          <a
-            href="/"
-            className="flex items-center gap-3 md:gap-4"
-          >
-
+          <Link to="/" className="flex items-center gap-3 md:gap-4">
             <div
               className="
                 w-10
@@ -77,14 +71,10 @@ export default function Navbar() {
                 shadow-md
               "
             >
-              <PawPrint
-                className="text-[#5B4A4A]"
-                size={20}
-              />
+              <PawPrint className="text-[#5B4A4A]" size={20} />
             </div>
 
             <div className="leading-[1.1] tracking-[-1px]">
-
               <h2
                 className="
                   text-[18px] 
@@ -114,9 +104,8 @@ export default function Navbar() {
               >
                 PetShop
               </p>
-
             </div>
-          </a>
+          </Link>
 
           {/* SEARCH */}
           <div
@@ -143,11 +132,7 @@ export default function Navbar() {
               border-[#ECECEC]
             "
           >
-
-            <Search
-              size={20}
-              className="text-[#8A8A8A] mr-3"
-            />
+            <Search size={20} className="text-[#8A8A8A] mr-3" />
 
             <input
               type="text"
@@ -168,7 +153,6 @@ export default function Navbar() {
 
           {/* RIGHT */}
           <div className="flex items-center gap-4 md:gap-5">
-
             {/* MOBILE SEARCH */}
             <Search
               size={21}
@@ -180,7 +164,6 @@ export default function Navbar() {
 
             {/* DESKTOP ICONS */}
             <div className="hidden md:flex items-center gap-5">
-
               <Heart
                 size={21}
                 className="
@@ -203,7 +186,6 @@ export default function Navbar() {
 
               {/* CART */}
               <div className="relative">
-
                 <ShoppingBag
                   size={21}
                   className="
@@ -251,12 +233,8 @@ export default function Navbar() {
                 shadow-md
               "
             >
-              <Menu
-                size={20}
-                className="text-[#4B3A3A]"
-              />
+              <Menu size={20} className="text-[#4B3A3A]" />
             </button>
-
           </div>
         </div>
 
@@ -272,7 +250,6 @@ export default function Navbar() {
             lg:mt-6
           "
         >
-
           <div
             className="
               flex
@@ -296,47 +273,45 @@ export default function Navbar() {
               border-white/20
             "
           >
-
             {navLinks.map((link, index) => (
-              <a
+              <Link
                 key={index}
-                href={link.href}
+                to={link.href}
                 className="
-                  relative
+                      relative
 
-                  text-[16px]
-                  lg:text-[20px]
+                      text-[16px]
+                      lg:text-[20px]
 
-                  font-medium
+                      font-medium
 
-                  text-[#3B2A2A]
+                      text-[#3B2A2A]
 
-                  hover:text-[#ff8a00]
+                      hover:text-[#ff8a00]
 
-                  transition
-                "
+                      transition
+                    "
               >
                 {link.label}
 
                 {index === 0 && (
                   <span
                     className="
-                      absolute
-                      left-0
-                      -bottom-2
+                          absolute
+                          left-0
+                          -bottom-2
 
-                      w-full
-                      h-[3px]
+                          w-full
+                          h-[3px]
 
-                      rounded-full
+                          rounded-full
 
-                      bg-[#ff8a00]
-                    "
+                          bg-[#ff8a00]
+                        "
                   />
                 )}
-              </a>
+              </Link>
             ))}
-
           </div>
         </div>
 
@@ -354,7 +329,6 @@ export default function Navbar() {
               md:hidden
             "
           >
-
             <div
               className="
                 absolute
@@ -373,13 +347,9 @@ export default function Navbar() {
                 shadow-2xl
               "
             >
-
               {/* TOP */}
               <div className="flex items-center justify-between mb-10">
-
-                <h3 className="text-2xl font-semibold text-[#2B1E1E]">
-                  Menú
-                </h3>
+                <h3 className="text-2xl font-semibold text-[#2B1E1E]">Menú</h3>
 
                 <button
                   onClick={() => setMenuOpen(false)}
@@ -402,34 +372,30 @@ export default function Navbar() {
 
               {/* LINKS */}
               <div className="flex flex-col gap-6">
-
                 {navLinks.map((link, index) => (
-                  <a
+                  <Link
                     key={index}
-                    href={link.href}
+                    to={link.href}
                     onClick={() => setMenuOpen(false)}
                     className="
-                      text-[20px]
+      text-[20px]
 
-                      font-medium
+      font-medium
 
-                      text-[#3B2A2A]
+      text-[#3B2A2A]
 
-                      hover:text-[#ff8a00]
+      hover:text-[#ff8a00]
 
-                      transition
-                    "
+      transition
+    "
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 ))}
-
               </div>
-
             </div>
           </div>
         )}
-
       </div>
     </header>
   );

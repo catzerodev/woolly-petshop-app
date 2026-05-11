@@ -1,27 +1,28 @@
-import Navbar from "./common/components/navbar/Navbar";
-import Hero from "./components/Hero";
-import Categories from "./components/Categories";
-import Products from "./components/Products";
-import VideoBanner from "./components/VideoBanner";
-import Brands from "./components/Brands";
-import Services from "./components/Services";
-import Blog from "./components/Blog";
-import Footer from "./components/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import HomePage from "./app/home/HomePage";
+import ShopPage from "./app/shop/ShopPage";
+import ServicesPage from "./app/services/ServicesPage";
+import BlogPage from "./app/blog/BlogPage";
+import AboutPage from "./app/about/AboutPage";
+import ContactPage from "./app/contact/ContactPage";
+import LoginPage from "./app/login/LoginPage";
+import DashboardPage from "./app/dashboard/DashboardPage";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <Categories />
-      <Products />
-      <VideoBanner />
-      <Brands />
-      <Services />
-      <Blog />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/shop" element={<ShopPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
