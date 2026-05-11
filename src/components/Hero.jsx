@@ -1,3 +1,5 @@
+// HERO.JSX
+
 export default function Hero() {
   return (
     <section
@@ -42,11 +44,11 @@ export default function Hero() {
           object-contain
 
           opacity-[0.05]
-          md:opacity-[0.06]
+          md:opacity-[0.05]
           lg:opacity-[0.10]
 
-          scale-[0.82]
-          md:scale-[0.9]
+          scale-[0.78]
+          md:scale-[0.78]
           lg:scale-110
 
           z-0
@@ -59,7 +61,7 @@ export default function Hero() {
         alt=""
         className="
           hidden
-          lg:block
+          xl:block
 
           absolute
 
@@ -83,7 +85,7 @@ export default function Hero() {
         alt="Dog"
         className="
           hidden
-          lg:block
+          xl:block
 
           absolute
 
@@ -105,14 +107,17 @@ export default function Hero() {
         className="
           hidden
           md:block
-          lg:hidden
+          xl:hidden
 
           absolute
 
-          right-[-140px]
+          right-[-220px]
+          lg:right-[-120px]
+
           bottom-[-8px]
 
-          h-[500px]
+          h-[480px]
+          lg:h-[520px]
 
           object-contain
 
@@ -274,7 +279,6 @@ export default function Hero() {
 
       </div>
 
-
       {/* WAVE */}
       <div
         className="
@@ -284,7 +288,6 @@ export default function Hero() {
 
           left-0
           w-full
-          
 
           overflow-hidden
           leading-none

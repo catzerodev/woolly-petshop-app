@@ -12,51 +12,54 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="relative mt-16 md:mt-20 lg:mt-24">
+    <footer className="relative mt-16 md:mt-20 lg:mt-24 overflow-hidden">
 
+      {/* PAWS */}
       <img
-          src="/paws.svg"
-          alt=""
-          className="
-            absolute
+        src="/paws.svg"
+        alt=""
+        className="
+          absolute
 
-            left-[-110px]
-            bottom-[40px]
+          left-[-90px]
+          bottom-[120px]
 
-            w-[420px]
-            md:w-[420px]
+          w-[220px]
+          md:w-[320px]
+          lg:w-[420px]
 
-            opacity-[0.035]
+          opacity-[0.025]
 
-            rotate-[8deg]
+          rotate-[8deg]
 
-            pointer-events-none
-            select-none
+          pointer-events-none
+          select-none
 
-            z-[1]
-          "
-        />
+          z-[1]
+        "
+      />
 
+      {/* PUG */}
       <img
         src="/footer/pug.png"
         alt="Pug"
         className="
-  hidden
-  lg:block
+          hidden
+          lg:block
 
-  absolute
+          absolute
 
-  right-0
+          right-0
 
-  top-[-100px]
+          top-[-10px]
 
-  z-30
+          z-30
 
-  w-full
+          w-full
 
-  pointer-events-none
-  select-none
-"
+          pointer-events-none
+          select-none
+        "
       />
 
       <div className="pt-3 md:pt-5 lg:pt-6">
@@ -65,12 +68,13 @@ export default function Footer() {
           className="
             relative
 
-            bg-gradient-to-r scale-[1.03]
+            bg-gradient-to-r
             from-[#F7D8FF]
             via-[#FFE6D6]
             to-[#FFB347]
 
             w-full
+            overflow-hidden
           "
         >
 
@@ -85,28 +89,26 @@ export default function Footer() {
 
               pt-20
               md:pt-44
-              lg:pt-56
+              lg:pt-72
 
               pb-10
               md:pb-14
               lg:pb-16
 
               grid
-
               grid-cols-1
               md:grid-cols-2
               lg:grid-cols-5
 
               gap-10
               md:gap-12
-              mt-10
-              
 
               relative
               z-20
             "
           >
 
+            {/* BRAND */}
             <div>
 
               <h3
@@ -145,6 +147,7 @@ export default function Footer() {
                 Lo mejor para consentir a tu mascota con productos premium y grooming profesional.
               </p>
 
+              {/* SOCIALS */}
               <div className="flex gap-3 mt-7 md:mt-10">
 
                 <a
@@ -209,8 +212,35 @@ export default function Footer() {
 
               </div>
 
+              {/* MOBILE CONTACT */}
+              <div
+                className="
+                  mt-8
+
+                  space-y-3
+
+                  text-[#5F5F5F]
+
+                  text-[14px]
+                  md:text-[15px]
+
+                  leading-relaxed
+
+                  lg:hidden
+                "
+              >
+
+                <p>Quito, Ecuador</p>
+
+                <p>+593 96 800 2100</p>
+
+                <p>ventas@woollypetshop.com</p>
+
+              </div>
+
             </div>
 
+            {/* STORE */}
             <div className="hidden md:block">
 
               <h4
@@ -246,6 +276,7 @@ export default function Footer() {
 
             </div>
 
+            {/* CATEGORIES */}
             <div className="hidden md:block">
 
               <h4
@@ -281,6 +312,7 @@ export default function Footer() {
 
             </div>
 
+            {/* LINKS */}
             <div className="hidden md:block">
 
               <h4
@@ -316,7 +348,8 @@ export default function Footer() {
 
             </div>
 
-            <div>
+            {/* CONTACT */}
+            <div className="hidden lg:block">
 
               <h4
                 className="
@@ -375,6 +408,7 @@ export default function Footer() {
 
           </div>
 
+          {/* COPYRIGHT */}
           <div
             className="
               border-t
@@ -389,6 +423,9 @@ export default function Footer() {
               md:text-[14px]
 
               text-[#6B6B6B]
+
+              relative
+              z-20
             "
           >
             © 2025 Woolly PetShop. Todos los derechos reservados.
