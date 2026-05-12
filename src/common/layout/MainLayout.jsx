@@ -1,9 +1,16 @@
 import Navbar from "../components/navbar/Navbar";
 import SimpleFooter from "../components/footer/SimpleFooter";
 
-export default function MainLayout({ children }) {
+export default function MainLayout({
+  children,
+  search,
+  setSearch,
+  showSearch,
+  products,
+}) {
 
   return (
+
     <div
       className="
         min-h-screen
@@ -19,7 +26,12 @@ export default function MainLayout({ children }) {
       "
     >
 
-      <Navbar />
+      <Navbar
+        search={search}
+        setSearch={setSearch}
+        showSearch={showSearch}
+        products={products}
+      />
 
       <main
         className="
@@ -41,11 +53,14 @@ export default function MainLayout({ children }) {
           md:pb-24
         "
       >
+
         {children}
+
       </main>
 
       <SimpleFooter />
 
     </div>
+
   );
 }

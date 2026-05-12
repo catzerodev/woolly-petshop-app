@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Navbar from "../../common/components/navbar/Navbar";
 import Hero from "../../common/components/hero/Hero";
 import Categories from "../../common/components/categories/Categories";
@@ -9,17 +11,34 @@ import Blog from "../../common/components/blog/Blog";
 import Footer from "../../common/components/footer/Footer";
 
 export default function HomePage() {
+
+  const [search, setSearch] = useState("");
+
   return (
     <>
-      <Navbar />
+
+      <Navbar
+        search={search}
+        setSearch={setSearch}
+        showSearch={true}
+      />
+
       <Hero />
+
       <Categories />
-      <Products />
+
+      <Products search={search} />
+
       <VideoBanner />
+
       <Brands />
+
       <Services />
+
       <Blog />
+
       <Footer />
+
     </>
   );
 }

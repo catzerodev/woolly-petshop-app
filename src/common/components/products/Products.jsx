@@ -51,7 +51,12 @@ const products = [
   },
 ];
 
-export default function Products() {
+export default function Products({ search = "" }) {
+
+  const filteredProducts = products.filter((product) =>
+    product.title.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <section
       className="
@@ -91,7 +96,8 @@ export default function Products() {
           "
         >
 
-          {products.map((product, index) => (
+          {filteredProducts.map((product, index) => (
+
             <a
               key={index}
               href="/shop"
@@ -217,10 +223,13 @@ export default function Products() {
               </div>
 
             </a>
+
           ))}
 
         </div>
+
       </div>
+
     </section>
   );
 }
