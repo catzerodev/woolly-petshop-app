@@ -2,6 +2,7 @@
 
 Woolly PetShop is a modern ecommerce web application focused on premium pet products and services.  
 The project was developed with a clean iOS-inspired design system, responsive UI, dynamic product search, shopping cart functionality, and an admin dashboard connected to Supabase.
+woolly-petshop.netlify.app
 
 ---
 
